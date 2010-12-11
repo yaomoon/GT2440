@@ -9,9 +9,6 @@ lkinlkkgiaf
 nl
 int main(int argc, const char *argv[])
 {
-when have
-
-when have
 
 when have
 
