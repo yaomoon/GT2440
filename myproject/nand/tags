@@ -1,0 +1,87 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BUSY	nand.c	3;"	d	file:
+GPB5_out	main.c	5;"	d	file:
+GPB6_out	main.c	6;"	d	file:
+GPB7_out	main.c	7;"	d	file:
+GPB8_out	main.c	8;"	d	file:
+GPBCON	main.c	2;"	d	file:
+GPBDAT	main.c	3;"	d	file:
+GSTATUS1	nand.c	2;"	d	file:
+MEM_CTL_BASE	init.c	5;"	d	file:
+NAND_BLOCK_MASK	nand.c	295;"	d	file:
+NAND_SECTOR_SIZE	nand.c	294;"	d	file:
+NFADDR	nand.c	/^    S3C24X0_REG32   NFADDR;$/;"	m	struct:__anon1	file:
+NFADDR	nand.c	/^    S3C24X0_REG32   NFADDR;$/;"	m	struct:__anon2	file:
+NFCMD	nand.c	/^    S3C24X0_REG32   NFCMD;$/;"	m	struct:__anon1	file:
+NFCMD	nand.c	/^    S3C24X0_REG32   NFCMD;$/;"	m	struct:__anon2	file:
+NFCONF	nand.c	/^    S3C24X0_REG32   NFCONF;$/;"	m	struct:__anon1	file:
+NFCONF	nand.c	/^    S3C24X0_REG32   NFCONF;$/;"	m	struct:__anon2	file:
+NFCONT	nand.c	/^    S3C24X0_REG32   NFCONT;$/;"	m	struct:__anon2	file:
+NFDATA	nand.c	/^    S3C24X0_REG32   NFDATA;$/;"	m	struct:__anon1	file:
+NFDATA	nand.c	/^    S3C24X0_REG32   NFDATA;$/;"	m	struct:__anon2	file:
+NFEBLK	nand.c	/^    S3C24X0_REG32   NFEBLK;$/;"	m	struct:__anon2	file:
+NFECC	nand.c	/^    S3C24X0_REG32   NFECC;$/;"	m	struct:__anon1	file:
+NFESTAT0	nand.c	/^    S3C24X0_REG32   NFESTAT0;$/;"	m	struct:__anon2	file:
+NFESTAT1	nand.c	/^    S3C24X0_REG32   NFESTAT1;$/;"	m	struct:__anon2	file:
+NFMECC0	nand.c	/^    S3C24X0_REG32   NFMECC0;$/;"	m	struct:__anon2	file:
+NFMECC1	nand.c	/^    S3C24X0_REG32   NFMECC1;$/;"	m	struct:__anon2	file:
+NFMECCD0	nand.c	/^    S3C24X0_REG32   NFMECCD0;$/;"	m	struct:__anon2	file:
+NFMECCD1	nand.c	/^    S3C24X0_REG32   NFMECCD1;$/;"	m	struct:__anon2	file:
+NFSBLK	nand.c	/^    S3C24X0_REG32   NFSBLK;$/;"	m	struct:__anon2	file:
+NFSECC	nand.c	/^    S3C24X0_REG32   NFSECC;$/;"	m	struct:__anon2	file:
+NFSECCD	nand.c	/^    S3C24X0_REG32   NFSECCD;$/;"	m	struct:__anon2	file:
+NFSTAT	nand.c	/^    S3C24X0_REG32   NFSTAT;$/;"	m	struct:__anon1	file:
+NFSTAT	nand.c	/^    S3C24X0_REG32   NFSTAT;$/;"	m	struct:__anon2	file:
+S3C2410_NAND	nand.c	/^} S3C2410_NAND;$/;"	t	typeref:struct:__anon1	file:
+S3C2440_NAND	nand.c	/^} S3C2440_NAND;$/;"	t	typeref:struct:__anon2	file:
+S3C24X0_REG32	nand.c	/^typedef unsigned int S3C24X0_REG32;$/;"	t	file:
+TACLS	nand.c	255;"	d	file:
+TWRPH0	nand.c	256;"	d	file:
+TWRPH1	nand.c	257;"	d	file:
+WTCON	init.c	2;"	d	file:
+_start	head.S	/^_start:$/;"	l
+disable_watch_dog	init.c	/^void disable_watch_dog()$/;"	f
+halt_loop	head.S	/^halt_loop:$/;"	l
+main	main.c	/^int main(void)$/;"	f
+memsetup	init.c	/^void memsetup()$/;"	f
+nand_chip	nand.c	/^static t_nand_chip nand_chip;$/;"	v	file:
+nand_deselect_chip	nand.c	/^    void (*nand_deselect_chip)(void);$/;"	m	struct:__anon3	file:
+nand_deselect_chip	nand.c	/^static void nand_deselect_chip(void)$/;"	f	file:
+nand_init	nand.c	/^void nand_init(void)$/;"	f
+nand_read	nand.c	/^void nand_read(unsigned char *buf, unsigned long start_addr, int size)$/;"	f
+nand_reset	nand.c	/^    void (*nand_reset)(void);$/;"	m	struct:__anon3	file:
+nand_reset	nand.c	/^static void nand_reset(void)$/;"	f	file:
+nand_select_chip	nand.c	/^    void (*nand_select_chip)(void);$/;"	m	struct:__anon3	file:
+nand_select_chip	nand.c	/^static void nand_select_chip(void)$/;"	f	file:
+objs	Makefile	/^objs := head.o init.o nand.o main.o$/;"	m
+read_data	nand.c	/^    unsigned char (*read_data)(void);$/;"	m	struct:__anon3	file:
+read_data	nand.c	/^static unsigned char read_data(void)$/;"	f	file:
+s3c2410_nand_deselect_chip	nand.c	/^static void s3c2410_nand_deselect_chip(void)$/;"	f	file:
+s3c2410_nand_reset	nand.c	/^static void s3c2410_nand_reset(void)$/;"	f	file:
+s3c2410_nand_select_chip	nand.c	/^static void s3c2410_nand_select_chip(void)$/;"	f	file:
+s3c2410_read_data	nand.c	/^static unsigned char s3c2410_read_data(void)$/;"	f	file:
+s3c2410_wait_idle	nand.c	/^static void s3c2410_wait_idle(void)$/;"	f	file:
+s3c2410_write_addr	nand.c	/^static void s3c2410_write_addr(unsigned int addr)$/;"	f	file:
+s3c2410_write_cmd	nand.c	/^static void s3c2410_write_cmd(int cmd)$/;"	f	file:
+s3c2410nand	nand.c	/^static S3C2410_NAND * s3c2410nand = (S3C2410_NAND *)0x4e000000;$/;"	v	file:
+s3c2440_nand_deselect_chip	nand.c	/^static void s3c2440_nand_deselect_chip(void)$/;"	f	file:
+s3c2440_nand_reset	nand.c	/^static void s3c2440_nand_reset(void)$/;"	f	file:
+s3c2440_nand_select_chip	nand.c	/^static void s3c2440_nand_select_chip(void)$/;"	f	file:
+s3c2440_read_data	nand.c	/^static unsigned char s3c2440_read_data(void)$/;"	f	file:
+s3c2440_wait_idle	nand.c	/^static void s3c2440_wait_idle(void)$/;"	f	file:
+s3c2440_write_addr	nand.c	/^static void s3c2440_write_addr(unsigned int addr)$/;"	f	file:
+s3c2440_write_cmd	nand.c	/^static void s3c2440_write_cmd(int cmd)$/;"	f	file:
+s3c2440nand	nand.c	/^static S3C2440_NAND * s3c2440nand = (S3C2440_NAND *)0x4e000000;$/;"	v	file:
+t_nand_chip	nand.c	/^}t_nand_chip;$/;"	t	typeref:struct:__anon3	file:
+wait	main.c	/^void  wait(unsigned long dly)$/;"	f
+wait_idle	nand.c	/^    void (*wait_idle)(void);$/;"	m	struct:__anon3	file:
+wait_idle	nand.c	/^static void wait_idle(void)$/;"	f	file:
+write_addr	nand.c	/^    void (*write_addr)(unsigned int addr);$/;"	m	struct:__anon3	file:
+write_addr	nand.c	/^static void write_addr(unsigned int addr)$/;"	f	file:
+write_cmd	nand.c	/^    void (*write_cmd)(int cmd);$/;"	m	struct:__anon3	file:
+write_cmd	nand.c	/^static void write_cmd(int cmd)$/;"	f	file:
