@@ -129,13 +129,15 @@ static void s3c2410_write_addr(unsigned int addr)
     int i;
     volatile unsigned char *p = (volatile unsigned char *)&s3c2410nand->NFADDR;
     
-    *p = addr & 0xff;
+    *p = 0x00;
     for(i=0; i<10; i++);
-    *p = (addr >> 9) & 0xff;
+    *p =  0x00;
     for(i=0; i<10; i++);
-    *p = (addr >> 17) & 0xff;
+    *p = (addr >> 11) & 0xff;
     for(i=0; i<10; i++);
-    *p = (addr >> 25) & 0xff;
+    *p = (addr >> 19) & 0xff;
+    for(i=0; i<10; i++);
+    *p = (addr >> 27) & 0xff;
     for(i=0; i<10; i++);
 }
 
@@ -192,14 +194,15 @@ static void s3c2440_write_addr(unsigned int addr)
 {
     int i;
     volatile unsigned char *p = (volatile unsigned char *)&s3c2440nand->NFADDR;
-    
-    *p = addr & 0xff;
+    *p = 0x00;
     for(i=0; i<10; i++);
-    *p = (addr >> 9) & 0xff;
+    *p = 0x00;
     for(i=0; i<10; i++);
-    *p = (addr >> 17) & 0xff;
+    *p = (addr >> 11) & 0xff;
     for(i=0; i<10; i++);
-    *p = (addr >> 25) & 0xff;
+    *p = (addr >> 19) & 0xff;
+    for(i=0; i<10; i++);
+    *p = (addr >> 27) & 0xff;
     for(i=0; i<10; i++);
 }
 
@@ -291,7 +294,7 @@ void nand_init(void)
 }
 
 
-#define NAND_SECTOR_SIZE    512
+#define NAND_SECTOR_SIZE    2048
 #define NAND_BLOCK_MASK     (NAND_SECTOR_SIZE - 1)
 
 /* ¶Áº¯Êý */
@@ -312,6 +315,8 @@ void nand_read(unsigned char *buf, unsigned long start_addr, int size)
 
       /* Write Address */
       write_addr(i);
+
+      write_cmd(0x30);
       wait_idle();
 
       for(j=0; j < NAND_SECTOR_SIZE; j++, i++) {

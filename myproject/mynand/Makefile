@@ -4,6 +4,7 @@ nand.bin : $(objs)
 	arm-linux-ld -Tnand.lds	-o nand_elf $^
 	arm-linux-objcopy -O binary -S nand_elf $@
 	arm-linux-objdump -D -m arm  nand_elf > nand.dis
+	cp nand.bin /mnt/hgfs/moon/bin/
 
 %.o:%.c
 	arm-linux-gcc -Wall -c -O2 -o $@ $<

@@ -16,7 +16,7 @@ _start:
                                             @nand_read_ll函数需要3个参数：
             ldr     r0,     =0x30000000     @1. 目标地址=0x30000000，这是SDRAM的起始地址
             mov     r1,     #4096           @2.  源地址   = 4096，连接的时候，main.c中的代码都存在NAND Flash地址4096开始处
-            mov     r2,     #1024           @3.  复制长度= 1024(bytes)，对于本实验的main.c，这是足够了
+            mov     r2,     #2048          @3.  复制长度= 1024(bytes)，对于本实验的main.c，这是足够了
             bl      nand_read               @调用C函数nand_read
 
             ldr     sp, =0x34000000         @设置栈

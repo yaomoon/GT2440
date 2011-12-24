@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/yaomoon/work/arm2440/GT2440
+cd ../GT2440
 echo hh
 echo -n "plz input commit msg: "
 read -e MSG

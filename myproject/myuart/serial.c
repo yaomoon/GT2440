@@ -117,5 +117,6 @@ void my_puts(unsigned char *str)
     while(*str)
     {
         my_putc(*str);
+        str++;
     }
 }

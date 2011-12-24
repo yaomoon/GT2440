@@ -1,1 +1,11 @@
 this is 2440 test projects
+
+2011.12.24
+1 myproject/mynand中有serial.c 和nand.c都是调试通过的，serial.c中可以用于插入其他工程调试，
+nand.c 也是通过的，
+uart 开始不通过原因：
+1没有uart_init();
+2没有clock_init();
+
+clock_init();可以不放在开始，在程序任意位置都可以改变cpu的频率，改频率（用MPLL）后，led闪动频率
+明显加快。
