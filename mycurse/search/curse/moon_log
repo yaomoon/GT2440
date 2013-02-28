@@ -1,0 +1,34 @@
+bg0=-1
+color pair0=0
+bg1=2
+color pair1=256
+bg2=-1
+color pair2=512
+bg3=-1
+color pair3=768
+bg4=1
+color pair4=1024
+bg5=-1
+color pair5=1280
+bg6=-1
+color pair6=1536
+bg7=-1
+color pair7=1792
+bg8=-1
+color pair8=2048
+getmaxyx y=53
+getmaxyx x=207
+color pair id =512
+line_info0
+hello yaomoon
+current_view=0
+394: view->pipe= cmd
+847:now view is main
+527: !base->win newwin
+855: view->pipe
+927: report
+color pair id =1024
+line_info2097152
+color pair id =1024
+line_info2097152
+get linue red attr =2098176

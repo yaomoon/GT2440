@@ -1,0 +1,105 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ABS	xxx.c	32;"	d	file:
+ARRAY_SIZE	xxx.c	34;"	d	file:
+COLOR_DEFAULT	xxx.c	30;"	d	file:
+FIND_CMD	xxx.c	25;"	d	file:
+FIND_CMDD	xxx.c	27;"	d	file:
+ICONV_CONST	xxx.c	41;"	d	file:
+ICONV_NONE	xxx.c	39;"	d	file:
+LINE	xxx.c	218;"	d	file:
+LINE	xxx.c	221;"	d	file:
+LINE	xxx.c	231;"	d	file:
+LINE	xxx.c	234;"	d	file:
+LINE_INFO	xxx.c	/^    LINE_INFO$/;"	e	enum:line_type	file:
+LINE_INFO	xxx.c	203;"	d	file:
+MIN	xxx.c	33;"	d	file:
+REQ_MOVE_DOWN	xxx.c	/^	REQ_MOVE_DOWN,$/;"	e	enum:request	file:
+REQ_MOVE_UP	xxx.c	/^	REQ_MOVE_UP,$/;"	e	enum:request	file:
+REQ_OFFSET	xxx.c	/^	REQ_OFFSET = KEY_MAX + 1,$/;"	e	enum:request	file:
+REQ_OPEN_VIM	xxx.c	/^	REQ_OPEN_VIM,$/;"	e	enum:request	file:
+REQ_SCREEN_RESIZE	xxx.c	/^	REQ_SCREEN_RESIZE,$/;"	e	enum:request	file:
+REQ_VIEW_CLOSE	xxx.c	/^	REQ_VIEW_CLOSE,$/;"	e	enum:request	file:
+REQ_VIEW_MAIN	xxx.c	/^	REQ_VIEW_MAIN,$/;"	e	enum:request	file:
+SIZEOF_STR	xxx.c	37;"	d	file:
+VIM_CMD	xxx.c	35;"	d	file:
+__NORETURN	xxx.c	336;"	d	file:
+__NORETURN	xxx.c	338;"	d	file:
+alias	xxx.c	/^    int alias;$/;"	m	struct:keymap	file:
+attr	xxx.c	/^    int fg, bg, attr;   \/* Color and text attributes for the lines. *\/$/;"	m	struct:line_info	file:
+begin_update	xxx.c	/^static bool begin_update(struct view *view)$/;"	f	file:
+bg	xxx.c	/^    int fg, bg, attr;   \/* Color and text attributes for the lines. *\/$/;"	m	struct:line_info	file:
+blankspace	xxx.c	/^static char *blankspace(const char *fname)$/;"	f	file:
+cmd	xxx.c	/^    const char *cmd;$/;"	m	struct:view	file:
+content	xxx.c	/^	char content[128];$/;"	m	struct:fileinfo	file:
+current_view	xxx.c	/^static unsigned int current_view;$/;"	v	file:
+cursed	xxx.c	/^static bool cursed = false;$/;"	v	file:
+default_read	xxx.c	/^static bool default_read(struct view *view, char *line)$/;"	f	file:
+default_render	xxx.c	/^static bool default_render(struct view *view, unsigned int lineno)$/;"	f	file:
+die	xxx.c	/^static void __NORETURN die(const char *err, ...)$/;"	f	file:
+display	xxx.c	/^static struct view *display[1];$/;"	v	typeref:struct:view	file:
+end_update	xxx.c	/^static void end_update(struct view *view)$/;"	f	file:
+fg	xxx.c	/^    int fg, bg, attr;   \/* Color and text attributes for the lines. *\/$/;"	m	struct:line_info	file:
+file	xxx.c	/^    char file[BUFSIZ];$/;"	m	struct:view	file:
+fileinfo	xxx.c	/^struct fileinfo {$/;"	s	file:
+fmt_cmd	xxx.c	/^static char fmt_cmd[BUFSIZ];$/;"	v	file:
+foreach_view	xxx.c	191;"	d	file:
+get_line_attr	xxx.c	/^static inline int get_line_attr(enum line_type type)$/;"	f	file:
+get_request	xxx.c	/^get_request(int key)$/;"	f	file:
+height	xxx.c	/^	int height, width;$/;"	m	struct:view	file:
+init	xxx.c	/^static void init(void)$/;"	f	file:
+init_colors	xxx.c	/^static void init_colors(void)$/;"	f	file:
+keymap	xxx.c	/^static struct keymap keymap[] = {$/;"	v	typeref:struct:keymap	file:
+keymap	xxx.c	/^struct keymap {$/;"	s	file:
+length	xxx.c	/^static int length;$/;"	v	file:
+line	xxx.c	/^	void **line;		\/* Line index *\/$/;"	m	struct:view	file:
+line	xxx.c	/^    const char *line;   \/* The start of line to match. *\/$/;"	m	struct:line_info	file:
+line_info	xxx.c	/^static struct line_info line_info[] = {$/;"	v	typeref:struct:line_info	file:
+line_info	xxx.c	/^struct line_info {$/;"	s	file:
+line_type	xxx.c	/^enum line_type {$/;"	g	file:
+linelen	xxx.c	/^    int linelen;        \/* Size of string to match. *\/$/;"	m	struct:line_info	file:
+lineno	xxx.c	/^	unsigned long lineno;	\/* Current line number *\/$/;"	m	struct:view	file:
+lines	xxx.c	/^	unsigned long lines;	\/* Total number of lines *\/$/;"	m	struct:view	file:
+main	xxx.c	/^int main(int argc, char *argv[])$/;"	f
+main_view	xxx.c	/^static struct view main_view = {$/;"	v	typeref:struct:view	file:
+move_view	xxx.c	/^static void move_view(struct view *view, int lines)$/;"	f	file:
+name	xxx.c	/^	char name[128];		$/;"	m	struct:fileinfo	file:
+name	xxx.c	/^	const char *name;$/;"	m	struct:view	file:
+navigate_view	xxx.c	/^static void navigate_view(struct view *view, int request)$/;"	f	file:
+number	xxx.c	/^    char number[6];$/;"	m	struct:fileinfo	file:
+offset	xxx.c	/^	unsigned long offset;	\/* Offset of the window top *\/$/;"	m	struct:view	file:
+open_view	xxx.c	/^static void open_view(struct view *prev)$/;"	f	file:
+opt_encoding	xxx.c	/^static char opt_encoding[20]		= "UTF-8";$/;"	v	file:
+opt_iconv_in	xxx.c	/^static iconv_t opt_iconv_in	= ICONV_NONE;$/;"	v	file:
+opt_iconv_out	xxx.c	/^static iconv_t opt_iconv_out = ICONV_NONE;$/;"	v	file:
+opt_tab_size	xxx.c	/^static int opt_tab_size = 8;$/;"	v	file:
+pipe	xxx.c	/^	FILE *pipe;$/;"	m	struct:view	file:
+quit	xxx.c	/^static void __NORETURN quit(int sig)$/;"	f	file:
+read	xxx.c	/^    bool (*read)(struct view *view, char *line);$/;"	m	struct:view	file:
+redraw_display	xxx.c	/^static void redraw_display(bool clear)$/;"	f	file:
+redraw_view	xxx.c	/^static void redraw_view(struct view *view)$/;"	f	file:
+redraw_view_from	xxx.c	/^static void redraw_view_from(struct view *view, int lineno)$/;"	f	file:
+render	xxx.c	/^    bool (*render)(struct view *view, unsigned int lineno);$/;"	m	struct:view	file:
+report	xxx.c	/^static void report(const char *msg, ...)$/;"	f	file:
+request	xxx.c	/^    int request;$/;"	m	struct:keymap	file:
+request	xxx.c	/^enum request {$/;"	g	file:
+resize_display	xxx.c	/^static void resize_display(void)$/;"	f	file:
+status_win	xxx.c	/^static WINDOW *status_win; $/;"	v	file:
+strcat1	xxx.c	/^char* strcat1(char *dest, const char *src)$/;"	f
+string_copy	xxx.c	121;"	d	file:
+string_expand	xxx.c	/^string_expand(char *dst, size_t dstlen, const char *src, int tabsize)$/;"	f	file:
+string_ncopy	xxx.c	/^string_ncopy(char *dst, const char *src, int dstlen)$/;"	f	file:
+strlength	xxx.c	/^static int strlength(const char *term)$/;"	f	file:
+strsplit	xxx.c	/^static char *strsplit(const char *line, const char c)$/;"	f	file:
+title	xxx.c	/^	WINDOW *title;$/;"	m	struct:view	file:
+update_title_win	xxx.c	/^static void update_title_win(struct view *view)$/;"	f	file:
+update_view	xxx.c	/^static int update_view(struct view *view)$/;"	f	file:
+view	xxx.c	/^struct view {$/;"	s	file:
+view_driver	xxx.c	/^static int view_driver(struct view *view, int key)$/;"	f	file:
+vim_cmd	xxx.c	/^static char vim_cmd[BUFSIZ];$/;"	v	file:
+width	xxx.c	/^	int height, width;$/;"	m	struct:view	file:
+win	xxx.c	/^	WINDOW *win;$/;"	m	struct:view	file:

@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+FORKS_H	forks.h	2;"	d
+LEFT	forks.c	3;"	d	file:
+RIGHT	forks.c	4;"	d	file:
+col	forks.c	/^    int col;$/;"	m	struct:location	file:
+fd	main.c	/^int fd[3][2];$/;"	v
+init	main.c	/^void init(void)$/;"	f
+leftfork	main.c	/^void leftfork(void)\/\/×ó±ß ¡°WSAD¡±$/;"	f
+llfork	main.c	/^void llfork(void)\/\/µ×²ã¼üÅÌ´¦Àí$/;"	f
+location	forks.c	/^struct location{$/;"	s	file:
+main	main.c	/^int main(int argc,char** argv)$/;"	f
+rightfork	main.c	/^void rightfork(void)\/\/ÓÒ±ß·½Ïò¼ü$/;"	f
+row	forks.c	/^    int row;$/;"	m	struct:location	file:
+screen_refresh	forks.c	/^void screen_refresh(int fd)$/;"	f
+screenfork	main.c	/^void screenfork(void)\/\/ÆÁÄ»Ë¢ÐÂ$/;"	f

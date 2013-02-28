@@ -1,0 +1,42 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BAR	main.c	13;"	d	file:
+Create_win	main.c	/^void Create_win(struct window *win, int size_y, int size_x, int y, int x)$/;"	f
+ENTER	menu.c	7;"	d	file:
+ESCAPE	menu.c	9;"	d	file:
+PANEL	main.c	12;"	d	file:
+bar	main.c	/^struct window bar[3];$/;"	v	typeref:struct:window
+debug	main.c	16;"	d	file:
+delete_menu	menu.c	/^void delete_menu(WINDOW **items, int count)$/;"	f
+display_win	main.c	/^void display_win(struct window *win)$/;"	f
+draw_bottom	main.c	/^void draw_bottom(void)$/;"	f
+draw_menu	menu.c	/^WINDOW **draw_menu(int start_col)$/;"	f
+draw_menubar	menu.c	/^void draw_menubar(WINDOW *menubar)$/;"	f
+element	main.c	/^    struct element *element;$/;"	m	struct:window	typeref:struct:window::element	file:
+element	main.c	/^struct element{$/;"	s	file:
+error	main.c	/^struct window error;$/;"	v	typeref:struct:window
+fill_element	main.c	/^struct element *fill_element(struct element *pre, char *key, char *value )$/;"	f
+fill_state	main.c	/^void fill_state(void)$/;"	f
+init_curses	main.c	/^void init_curses(void)$/;"	f
+init_curses	menu.c	/^void init_curses()$/;"	f
+key	main.c	/^    char key[50];$/;"	m	struct:element	file:
+main	kkk.c	/^int main(int argc, const char *argv[])$/;"	f
+main	main.c	/^int main(int argc, const char *argv[])$/;"	f
+main	menu.c	/^int main()$/;"	f
+moon_log	main.c	/^FILE *moon_log;$/;"	v
+name	main.c	/^    char name[10];$/;"	m	struct:window	file:
+next	main.c	/^    struct element *next;$/;"	m	struct:element	typeref:struct:element::element	file:
+scene	main.c	/^struct window scene[5];$/;"	v	typeref:struct:window
+scroll_menu	menu.c	/^int scroll_menu(WINDOW **items, int count , int menu_start_col)$/;"	f
+size_x	main.c	/^    int size_x;$/;"	m	struct:window	file:
+size_y	main.c	/^    int size_y;$/;"	m	struct:window	file:
+state	main.c	/^struct window state;$/;"	v	typeref:struct:window
+value	main.c	/^    char value[100];$/;"	m	struct:element	file:
+win	main.c	/^    WINDOW *win;$/;"	m	struct:window	file:
+window	main.c	/^struct window{$/;"	s	file:
+x	main.c	/^    int x;$/;"	m	struct:window	file:
+y	main.c	/^    int y;$/;"	m	struct:window	file:

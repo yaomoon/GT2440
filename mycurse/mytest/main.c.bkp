@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <ncurses.h>
+#include <unistd.h>
+
+void init(void)
+{
+    initscr();
+    start_color();
+    init_pair(1,COLOR_WHITE,COLOR_BLUE);
+    init_pair(2,COLOR_WHITE,COLOR_RED);
+    //cbreak();
+    //keypad(stdscr,TRUE);
+    //noecho();
+}
+
+int main(int argc, const char *argv[])
+{
+    int i;
+    
+    int x_max,y_max;
+    WINDOW *win;
+    WINDOW *title;
+
+    init();
+
+
+    getmaxyx(stdscr,y_max,x_max);
+    title = newwin(10, 20, y_max -30, 0); 
+    wbkgd(title, COLOR_PAIR(2));
+    box(title,'|','-');
+    wprintw(title, "[RPathN]");
+    wrefresh(title);
+    //wnoutrefresh(title);
+    //doupdate();
+
+    while(1);
+
+    mvprintw(y_max-10,1,"Press F2 to exit.");
+    mvprintw(10,1,"hello everyone");
+    refresh();
+    
+    for (i = 0; i < 10 ; i++) 
+    {
+        mvaddch(7,40+i-1,' ');
+        mvaddch(7,40+i,'*');
+        refresh();
+        sleep(1);
+    }
+
+
+    endwin();
+
+    return 0;
+}
