@@ -1,3 +1,7 @@
-!pre
-head is not NULL
-head is not NULL
+this is main file
+moon_test stat
+fill_scene stat
+fill_scene 2 mm
+fill_scene name mm, info moon
+temp is not NULL
+while(*temp)

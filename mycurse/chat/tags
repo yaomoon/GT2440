@@ -8,27 +8,33 @@ BAR	curses.c	13;"	d	file:
 Create_win	curses.c	/^void Create_win(struct window *win, int size_y, int size_x, int y, int x)$/;"	f
 PANEL	curses.c	12;"	d	file:
 bar	curses.c	/^struct window bar[3];$/;"	v	typeref:struct:window
+chat_info	curses.c	/^struct chat_info{$/;"	s	file:
+contact	curses.c	/^struct window contact;$/;"	v	typeref:struct:window
+content	curses.c	/^    void **content;$/;"	m	struct:window	file:
 debug	curses.c	16;"	d	file:
 display_win	curses.c	/^void display_win(struct window *win)$/;"	f
 draw_bottom	curses.c	/^void draw_bottom(void)$/;"	f
 element	curses.c	/^    struct element *element;$/;"	m	struct:window	typeref:struct:window::element	file:
 element	curses.c	/^struct element{$/;"	s	file:
-error	curses.c	/^struct window error;$/;"	v	typeref:struct:window
+fill_contact	curses.c	/^void fill_contact(char *name, char *value)$/;"	f
 fill_element	curses.c	/^struct element *fill_element(struct element *pre, char *key, char *value )$/;"	f
-fill_error	curses.c	/^void fill_error(char *name, char *value)$/;"	f
-fill_state	curses.c	/^void fill_state(char *name, char *value)$/;"	f
+fill_input	curses.c	/^void fill_input(char *name, char *value)$/;"	f
+fill_scene	curses.c	/^void fill_scene(char *line)$/;"	f
+info	curses.c	/^char info[255];$/;"	m	struct:chat_info	file:
 init_curses	curses.c	/^void init_curses(void)$/;"	f
+input	curses.c	/^struct window input;$/;"	v	typeref:struct:window
 key	curses.c	/^    char key[50];$/;"	m	struct:element	file:
 main	main.c	/^int main(int argc, const char *argv[])$/;"	f
 moon_log	curses.c	/^FILE *moon_log;$/;"	v
-moon_test	curses.c	/^void moon_test(void)$/;"	f
+moon_test	curses.c	/^void moon_test(char *line)$/;"	f
 name	curses.c	/^    char name[10];$/;"	m	struct:window	file:
+name	curses.c	/^char name[50];$/;"	m	struct:chat_info	file:
 next	curses.c	/^    struct element *next;$/;"	m	struct:element	typeref:struct:element::element	file:
-refresh_state	curses.c	/^void refresh_state(void)$/;"	f
-scene	curses.c	/^struct window scene[5];$/;"	v	typeref:struct:window
+refresh_contact	curses.c	/^void refresh_contact(void)$/;"	f
+scene	curses.c	/^struct window scene;$/;"	v	typeref:struct:window
 size_x	curses.c	/^    int size_x;$/;"	m	struct:window	file:
 size_y	curses.c	/^    int size_y;$/;"	m	struct:window	file:
-state	curses.c	/^struct window state;$/;"	v	typeref:struct:window
+tablet_str	curses.c	/^void tablet_str(char *str)$/;"	f
 value	curses.c	/^    char value[100];$/;"	m	struct:element	file:
 win	curses.c	/^    WINDOW *win;$/;"	m	struct:window	file:
 window	curses.c	/^struct window{$/;"	s	file:

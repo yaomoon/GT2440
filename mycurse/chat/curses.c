@@ -19,6 +19,11 @@ FILE *moon_log;
 #endif
 //
 //
+struct chat_info{
+char name[50];
+char info[255];
+};
+
 struct element{
     char key[50];
     char value[100];
@@ -29,6 +34,7 @@ struct window{
     char name[10];
     WINDOW *win;
     struct element *element;
+    void **content;
     int size_x;
     int size_y;
     int x;
@@ -37,7 +43,7 @@ struct window{
 
 struct window contact;
 struct window input;
-struct window scene[5];
+struct window scene;
 struct window bar[3];
 
 void Create_win(struct window *win, int size_y, int size_x, int y, int x)
@@ -52,8 +58,8 @@ struct element *fill_element(struct element *pre, char *key, char *value )
 {
     struct element *node;
 
-    node = (struct element *)malloc(sizeof(struct element));
-    
+    //node = (struct element *)malloc(sizeof(struct element));
+    // 
     memset(node->key,0,sizeof(node->key));
     memset(node->value,0,sizeof(node->value));
     strcpy(node->key, key);
@@ -63,7 +69,7 @@ struct element *fill_element(struct element *pre, char *key, char *value )
     if(!pre)
     {
 #ifdef debug
-    fprintf(moon_log,"!pre\n");
+        //fprintf(moon_log,"!pre\n");
 #endif
         pre = node;
     }
@@ -110,13 +116,15 @@ void fill_input(char *name, char *value)
 void display_win(struct window *win)
 {
     struct element *head = win->element;
+    void **temp = win->content;
+    struct chat_info *info;
 
     wclear(win->win);
 
     if(head)
     {
 #ifdef debug
-    fprintf(moon_log,"head is not NULL\n");
+        //fprintf(moon_log,"head is not NULL\n");
 #endif
         while(head)
         {
@@ -124,6 +132,19 @@ void display_win(struct window *win)
             head = head->next;
         }
 
+    }else if(temp)
+    {
+#ifdef debug
+        fprintf(moon_log,"temp is not NULL\n");
+#endif
+        while(*temp)
+        {
+#ifdef debug
+        fprintf(moon_log,"while(*temp)\n");
+#endif
+            info = *temp++; 
+            wprintw(win->win,"%s  %s\n",info->name,info->info);
+        }
     }
     wrefresh(win->win); 
 }
@@ -140,7 +161,7 @@ void draw_bottom(void)
     getmaxyx(stdscr, y_max,x_max);
 
     //聊天窗口
-    Create_win(&scene[0],y_max/3*2,x_max/3*2,1,0);
+    Create_win(&scene,y_max/3*2,x_max/3*2,1,0);
     //scene[0].win = subwin(stdscr,y_max/3*2,x_max/3*2,1,0);
 
     // 框条窗口
@@ -154,14 +175,14 @@ void draw_bottom(void)
     //输入窗口
     Create_win(&input,y_max/3-1,x_max/3*2,y_max/3*2+2,0);
 
-    wbkgd(scene[0].win,COLOR_PAIR(PANEL));
+    wbkgd(scene.win,COLOR_PAIR(PANEL));
     wbkgd(bar[0].win,COLOR_PAIR(BAR));
     wbkgd(bar[1].win,COLOR_PAIR(BAR));
     wbkgd(bar[2].win,COLOR_PAIR(BAR));
     wbkgd(contact.win,COLOR_PAIR(PANEL));
     wbkgd(input.win,COLOR_PAIR(PANEL));
 
-    display_win(&scene[0]);
+    display_win(&scene);
     display_win(&bar[0]);
     display_win(&bar[1]);
     display_win(&bar[2]);
@@ -207,6 +228,56 @@ void tablet_str(char *str)
 
 }
 
+void fill_scene(char *line)
+{
+    int name_len;
+    int info_len;
+    struct chat_info *info;
+    static int lines = 0;
+    void **temp;
+
+#ifdef debug
+        fprintf(moon_log,"fill_scene stat\n");
+#endif
+
+    if(lines == 0)
+    {
+        lines = scene.size_y;
+        temp = realloc(scene.content, sizeof(*scene.content)*scene.size_y);
+    }
+    scene.content = temp;
+
+    info = (struct chat_info *)calloc(1, sizeof(struct chat_info));
+    
+    name_len = *(int *)line;
+    line +=4;
+    strncpy(info->name,line,name_len); 
+#ifdef debug
+        fprintf(moon_log,"fill_scene %d %s\n",name_len, info->name);
+#endif
+    line +=name_len;
+
+    info_len = *(int *)line;
+    line +=4;
+    strncpy(info->info, line, info_len);
+
+    *temp++ = info;
+    lines --;
+
+#ifdef debug
+        fprintf(moon_log,"fill_scene name %s, info %s\n",info->name, info->info);
+#endif
+}
+
+void moon_test(char *line)
+{
+#ifdef debug
+    fprintf(moon_log,"moon_test stat\n");
+#endif
+        fill_scene(line);
+
+        display_win(&scene);
+}
 
 /*
 int main(int argc, const char *argv[])
